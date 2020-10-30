@@ -30,6 +30,16 @@ public class Algorithms1 {
 
     // TODO 4 - Skriv en randomGirlName() metode i Algorithms1, som returnerer et tilfældigt pigenavn fra Data klassen
 
+    public String randomGirlsName(){
+        String[] names;
+        Data data = new Data();
+        names = data.getRandomPigeNavne();
+        int arrayLength = names.length;
+        int randomInt = rand.nextInt(arrayLength);
+        String randomName= names[randomInt];
+        return randomName;
+    }
+
     // TODO 5 - Skriv en randomName() metode i Algorithms1, som laver et sammenlagt array som indeholder både piger og drenge, og returnerer det
 
     // TODO 6 - Skriv en test til randomName() metoden

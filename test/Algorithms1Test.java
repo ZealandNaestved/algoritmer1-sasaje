@@ -8,6 +8,13 @@ class Algorithms1Test {
     void randomBoyName() {
         Algorithms1 a = new Algorithms1();
         a.rand.setSeed(5);
-        assertEquals("Cello", a.randomBoyName());
+        assertEquals("Klausbjerke", a.randomBoyName());
+    }
+
+    @Test
+    void randomGirlsName() {
+        Algorithms1 a = new Algorithms1();
+        a.rand.setSeed(5);
+        assertEquals("Gin" , a.randomGirlsName());
     }
 }
