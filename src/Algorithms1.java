@@ -1,7 +1,4 @@
-import java.sql.SQLOutput;
 import java.util.Random;
-import java.util.Arrays;
-import java.util.Scanner;
 
 /**
  * Developed by András Ács (acsandras@gmail.com)
@@ -46,7 +43,6 @@ public class Algorithms1 {
     }
 
     // TODO 5 - Skriv en randomName() metode i Algorithms1, som laver et sammenlagt array som indeholder både piger og drenge, og returnerer det
-        // See main
     public String randomName(){
         String[] names;
         Data data = new Data();
@@ -61,8 +57,9 @@ public class Algorithms1 {
         //See DataTest.java
 
     // TODO 7 - Skriv en random bogstavs-generator metode (du kan tage udgangspunkt i randomNumbers() i Data)
+        //See main and in Data.java
 
-    // TODO 8 - Skriv en  plet eller krone generator metode (plet er boolean true og krone er boolean false)
+    // TODO 8 - Skriv en plat eller krone generator metode (plat er boolean true og krone er boolean false)
 
     // TODO 9 - Lav en ny array i Data klassen, som skal indeholde navne på medlemmer af din gruppe. Lav metoden whoShall() i Algorithms1, som skal returnere et navn fra gruppen
 
@@ -88,5 +85,4 @@ public class Algorithms1 {
         System.out.print("Hvis vi bruger seed, vil random altid returnere de samme værdier, f.eks. giver denne 21 --> ");
         System.out.println(random.nextInt(45));
     }
-
 }
