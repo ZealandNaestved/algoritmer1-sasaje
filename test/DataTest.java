@@ -9,7 +9,7 @@ class DataTest {
     @Test
     void randomName() {
         Algorithms1 a = new Algorithms1();
-        a.rand.setSeed(5);
-        assertEquals("Kamel", a.rand);
+        a.rand.setSeed(2);
+        assertEquals("Jazz", a.randomName());
     }
 }

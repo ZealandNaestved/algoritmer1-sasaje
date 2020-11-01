@@ -47,8 +47,18 @@ public class Algorithms1 {
 
     // TODO 5 - Skriv en randomName() metode i Algorithms1, som laver et sammenlagt array som indeholder både piger og drenge, og returnerer det
         // See main
+    public String randomName(){
+        String[] names;
+        Data data = new Data();
+        names = data.mergeArrays();
+        int arrayLength = names.length;
+        int randomInt = rand.nextInt(arrayLength);
+        String randomName = names[randomInt];
+        return randomName;
+    }
 
     // TODO 6 - Skriv en test til randomName() metoden
+        //See DataTest.java
 
     // TODO 7 - Skriv en random bogstavs-generator metode (du kan tage udgangspunkt i randomNumbers() i Data)
 
@@ -65,7 +75,11 @@ public class Algorithms1 {
 
         //Assignment 5
         Algorithms1 a5 = new Algorithms1();
-        Data.randomName();
+        System.out.println("Random name from the merged array is: " + a5.randomName());
+
+        //Assignment 7
+        Data data7 = new Data();
+        System.out.println("Random letter: " + data7.getRandomLetter());
     }
 
     private static void exampleOfPredictableRandomNumber() {

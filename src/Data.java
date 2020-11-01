@@ -18,15 +18,19 @@ public class Data {
     private String[] randomPigeNavne = {"Ae", "Aloha", "Altan", "Amen", "Badr", "Befri", "Charme", "Cirkel", "Diddedarling", "Dyne", "Engel", "Europa", "Fan", "Fe", "Fri", "Fryd", "Gift", "Gin", "Glød", "Gul", "Hane", "Harme", "Håb", "Kigge", "Krushbakht", "Malmfred", "Manjabjørg", "Musling", "Myrtille", "Nectaria", "Nøks", "Ninja", "Nitte", "Ny", "Ok", "Panda", "Pil", "Pop", "Rikkepippih", "Ryle", "Sne", "Soya", "Tigerlilly", "Tytte", "Vølve"}; // fra https://www.alt.dk/boern/her-er-danmarks-90-usaedvanlige-navne
     private String[] randomDrengeNavne = {"Awesome", "Barc", "Blær", "Brormand", "Bue", "Cello", "Cobra", "Dreng", "Faktor", "Fru", "Gandalf", "Haj", "Havand", "Jazz", "Jesus", "Jura", "Kamel", "Klausbjerke", "Kritte", "Laban", "Lillemann", "Life", "Lucky (kan endda kombineres med Luke)", "Ludo", "Lurifax", "Memo", "Muslim", "Nam", "Niks", "Nord", "Offer", "Og", "Piphat", "Rocky", "Skak", "Skat", "Snoopy", "Sok", "Sut", "Syver", "Sønnik", "Tavs", "Triumf", "Tung", "Viking"};
 
-    public static Object[] mergeArrays(){
+    public static String[] mergeArrays(){
         // room for improvement variables should not be declared again. Get the above variables included - but how?? TODO improvement
         String[] a = {"Ae", "Aloha", "Altan", "Amen", "Badr", "Befri", "Charme", "Cirkel", "Diddedarling", "Dyne", "Engel", "Europa", "Fan", "Fe", "Fri", "Fryd", "Gift", "Gin", "Glød", "Gul", "Hane", "Harme", "Håb", "Kigge", "Krushbakht", "Malmfred", "Manjabjørg", "Musling", "Myrtille", "Nectaria", "Nøks", "Ninja", "Nitte", "Ny", "Ok", "Panda", "Pil", "Pop", "Rikkepippih", "Ryle", "Sne", "Soya", "Tigerlilly", "Tytte", "Vølve"}; // fra https://www.alt.dk/boern/her-er-danmarks-90-usaedvanlige-navne
         String[] b = {"Awesome", "Barc", "Blær", "Brormand", "Bue", "Cello", "Cobra", "Dreng", "Faktor", "Fru", "Gandalf", "Haj", "Havand", "Jazz", "Jesus", "Jura", "Kamel", "Klausbjerke", "Kritte", "Laban", "Lillemann", "Life", "Lucky (kan endda kombineres med Luke)", "Ludo", "Lurifax", "Memo", "Muslim", "Nam", "Niks", "Nord", "Offer", "Og", "Piphat", "Rocky", "Skak", "Skat", "Snoopy", "Sok", "Sut", "Syver", "Sønnik", "Tavs", "Triumf", "Tung", "Viking"};
         List list = new ArrayList(Arrays.asList(a));
         list.addAll(Arrays.asList(b));
         Object[] c = list.toArray();
-//        System.out.println(Arrays.toString(c));
-        return c;
+        String mergedResult = Arrays.toString(c);
+
+        String myString = mergedResult;
+        String[] myArray = myString.split(", ");
+        List <String> myList = Arrays.asList(myArray);
+        return myArray;
     }
 
     public static void main(String[] args) {
@@ -42,6 +46,17 @@ public class Data {
         System.out.print("}");
     }
 
+    private static char randomLetter(){
+        Random rnd = new Random();
+        char c = (char) ('a' + rnd.nextInt(26));
+        return c;
+    }
+
+    public static char getRandomLetter(){
+        char randomLetter = randomLetter();
+        return randomLetter;
+    }
+
     public String[] getRandomDrengeNavne() {
         return randomDrengeNavne;
     }
@@ -49,11 +64,5 @@ public class Data {
         return randomPigeNavne;
     }
 
-    public static void randomName(){
-        //Random name from merged arrays
-        Random generate = new Random();
-        Object[] arrayName = mergeArrays();
-        Object randomName = arrayName[generate.nextInt(mergeArrays().length)];
-        System.out.println("Random name from the merged array is: " + randomName);
-    }
+
 }
