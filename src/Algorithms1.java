@@ -1,4 +1,7 @@
+import java.sql.SQLOutput;
 import java.util.Random;
+import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * Developed by András Ács (acsandras@gmail.com)
@@ -11,12 +14,12 @@ public class Algorithms1 {
 
     Random rand = new Random();
 
+
     // TODO 1 - Gennemse Data klassen, og skriv gode kommentarer til det
 
     // TODO 2 - Skriv en randomBoyName() metode i Algorithms1, som returnerer et tilfældigt drengenavn fra Data klassens randomDrengeNavne property OBS: randomDrengeNavne skal forblive private!
 
     public String randomBoyName() {
-
         String[] names;
         Data data = new Data();
         names = data.getRandomDrengeNavne();
@@ -27,6 +30,8 @@ public class Algorithms1 {
     }
 
     // TODO 3 - Skriv en test til randomBoyName() metoden HINT: Se metoden exampleOfPredictableRandomNumber() for at se, hvordan du kan lave et tilfældigt nummer som er altid det samme (til test)
+
+        // See solution in Algorithms1Test.java
 
     // TODO 4 - Skriv en randomGirlName() metode i Algorithms1, som returnerer et tilfældigt pigenavn fra Data klassen
 
@@ -41,6 +46,7 @@ public class Algorithms1 {
     }
 
     // TODO 5 - Skriv en randomName() metode i Algorithms1, som laver et sammenlagt array som indeholder både piger og drenge, og returnerer det
+        // See main
 
     // TODO 6 - Skriv en test til randomName() metoden
 
@@ -56,6 +62,10 @@ public class Algorithms1 {
         exampleOfPredictableRandomNumber();
         Algorithms1 a1 = new Algorithms1();
         System.out.println("Et random navn er " + a1.randomBoyName());
+
+        //Assignment 5
+        Algorithms1 a5 = new Algorithms1();
+        Data.randomName();
     }
 
     private static void exampleOfPredictableRandomNumber() {
