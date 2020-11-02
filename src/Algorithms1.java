@@ -93,7 +93,6 @@ public class Algorithms1 {
         return newArrayOfName;
     }
 
-
     public static void main(String[] args) {
         exampleOfPredictableRandomNumber();
         Algorithms1 a1 = new Algorithms1();

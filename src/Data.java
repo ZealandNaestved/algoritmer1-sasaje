@@ -89,4 +89,8 @@ public class Data {
     public String[] getStudieGruppe() {
         return studieGruppe;
     }
+    public int[] getRandomNumbers1000() {
+        return randomNumbers1000;
+    }
+
 }
