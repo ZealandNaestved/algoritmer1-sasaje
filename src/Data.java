@@ -18,10 +18,12 @@ public class Data {
     private String[] randomPigeNavne = {"Ae", "Aloha", "Altan", "Amen", "Badr", "Befri", "Charme", "Cirkel", "Diddedarling", "Dyne", "Engel", "Europa", "Fan", "Fe", "Fri", "Fryd", "Gift", "Gin", "Glød", "Gul", "Hane", "Harme", "Håb", "Kigge", "Krushbakht", "Malmfred", "Manjabjørg", "Musling", "Myrtille", "Nectaria", "Nøks", "Ninja", "Nitte", "Ny", "Ok", "Panda", "Pil", "Pop", "Rikkepippih", "Ryle", "Sne", "Soya", "Tigerlilly", "Tytte", "Vølve"}; // fra https://www.alt.dk/boern/her-er-danmarks-90-usaedvanlige-navne
     private String[] randomDrengeNavne = {"Awesome", "Barc", "Blær", "Brormand", "Bue", "Cello", "Cobra", "Dreng", "Faktor", "Fru", "Gandalf", "Haj", "Havand", "Jazz", "Jesus", "Jura", "Kamel", "Klausbjerke", "Kritte", "Laban", "Lillemann", "Life", "Lucky (kan endda kombineres med Luke)", "Ludo", "Lurifax", "Memo", "Muslim", "Nam", "Niks", "Nord", "Offer", "Og", "Piphat", "Rocky", "Skak", "Skat", "Snoopy", "Sok", "Sut", "Syver", "Sønnik", "Tavs", "Triumf", "Tung", "Viking"};
 
-    public static String[] mergeArrays(){
-        // Room for improvement: variables should not be declared again. Get the above variables included - but how?? TODO improvement
-        String[] a = {"Ae", "Aloha", "Altan", "Amen", "Badr", "Befri", "Charme", "Cirkel", "Diddedarling", "Dyne", "Engel", "Europa", "Fan", "Fe", "Fri", "Fryd", "Gift", "Gin", "Glød", "Gul", "Hane", "Harme", "Håb", "Kigge", "Krushbakht", "Malmfred", "Manjabjørg", "Musling", "Myrtille", "Nectaria", "Nøks", "Ninja", "Nitte", "Ny", "Ok", "Panda", "Pil", "Pop", "Rikkepippih", "Ryle", "Sne", "Soya", "Tigerlilly", "Tytte", "Vølve"}; // fra https://www.alt.dk/boern/her-er-danmarks-90-usaedvanlige-navne
-        String[] b = {"Awesome", "Barc", "Blær", "Brormand", "Bue", "Cello", "Cobra", "Dreng", "Faktor", "Fru", "Gandalf", "Haj", "Havand", "Jazz", "Jesus", "Jura", "Kamel", "Klausbjerke", "Kritte", "Laban", "Lillemann", "Life", "Lucky (kan endda kombineres med Luke)", "Ludo", "Lurifax", "Memo", "Muslim", "Nam", "Niks", "Nord", "Offer", "Og", "Piphat", "Rocky", "Skak", "Skat", "Snoopy", "Sok", "Sut", "Syver", "Sønnik", "Tavs", "Triumf", "Tung", "Viking"};
+    private String[] studieGruppe = {"Jenna", "Louise", "Malte", "Laila", "Sara"};
+
+    public String[] mergeArrays(){
+        String[] a = this.randomPigeNavne;
+        String[] b = this.randomDrengeNavne;
+
         List list = new ArrayList(Arrays.asList(a));
         list.addAll(Arrays.asList(b));
         Object[] c = list.toArray();
@@ -84,5 +86,7 @@ public class Data {
         return randomPigeNavne;
     }
 
-
+    public String[] getStudieGruppe() {
+        return studieGruppe;
+    }
 }
