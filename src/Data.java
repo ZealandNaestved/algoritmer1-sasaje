@@ -52,6 +52,26 @@ public class Data {
         return c;
     }
 
+    private static String headTails(){
+        Random random = new Random();
+        int head = 0;
+        int tail = 1;
+        int result = random.nextInt(2);
+        String resultMessage = "";
+
+        if(result==head){
+            resultMessage = "The coin show head";
+        }else{
+            resultMessage = "The coin show tail";
+        }
+        return resultMessage;
+    }
+
+    public static String getHeadTails(){
+        String result = headTails();
+        return result;
+    }
+
     public static char getRandomLetter(){
         char randomLetter = randomLetter();
         return randomLetter;

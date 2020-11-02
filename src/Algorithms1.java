@@ -60,6 +60,8 @@ public class Algorithms1 {
         //See main and in Data.java
 
     // TODO 8 - Skriv en plat eller krone generator metode (plat er boolean true og krone er boolean false)
+        //See method in Data.java
+
 
     // TODO 9 - Lav en ny array i Data klassen, som skal indeholde navne på medlemmer af din gruppe. Lav metoden whoShall() i Algorithms1, som skal returnere et navn fra gruppen
 
@@ -77,6 +79,11 @@ public class Algorithms1 {
         //Assignment 7
         Data data7 = new Data();
         System.out.println("Random letter: " + data7.getRandomLetter());
+
+        //Assignment 8
+        Random random8 = new Random();
+        Data data8 = new Data();
+        System.out.println("Head/tail generator result: " + Data.getHeadTails());
     }
 
     private static void exampleOfPredictableRandomNumber() {
